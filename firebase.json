@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "target": "bytefusion.pro100byte.ru",
+    "target": "bytefusion-p1b.web.app",
     "public": "dist",
     "ignore": [
       "firebase.json",
