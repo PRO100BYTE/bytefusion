@@ -3,11 +3,9 @@
     "default": "bytefusion"
   },
   "targets": {
-    "bytefusion-p1b.web.app": {
+    "bytefusion": {
       "hosting": {
-        "frontend": [
-          "bytefusion-p1b.web.app"
-        ]
+        "site": "bytefusion-p1b.web.app"
       }
     }
   }
