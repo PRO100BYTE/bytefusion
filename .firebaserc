@@ -1,12 +1,5 @@
 {
   "projects": {
     "default": "bytefusion"
-  },
-  "targets": {
-    "bytefusion": {
-      "hosting": {
-        "site": "bytefusion-p1b.web.app"
-      }
-    }
   }
 }

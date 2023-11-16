@@ -3,7 +3,6 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "target": "bytefusion-p1b.web.app",
     "public": "dist",
     "ignore": [
       "firebase.json",
