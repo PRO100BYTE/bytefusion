@@ -24,9 +24,6 @@ class Firebase {
   signInWithGoogle = () =>
     this.auth.signInWithPopup(new app.auth.GoogleAuthProvider());
 
-  signInWithFacebook = () =>
-    this.auth.signInWithPopup(new app.auth.FacebookAuthProvider());
-
   signInWithGithub = () =>
     this.auth.signInWithPopup(new app.auth.GithubAuthProvider());
 
@@ -48,7 +45,7 @@ class Firebase {
           user
             .updatePassword(newPassword)
             .then(() => {
-              resolve("Password updated successfully!");
+              resolve("Пароль успешно обновлен");
             })
             .catch((error) => reject(error));
         })
@@ -73,7 +70,7 @@ class Firebase {
           user
             .updateEmail(newEmail)
             .then(() => {
-              resolve("Email Successfully updated");
+              resolve("Адрес электронной почты успешно обновлен");
             })
             .catch((error) => reject(error));
         })
@@ -89,7 +86,7 @@ class Firebase {
         if (user) {
           resolve(user);
         } else {
-          reject(new Error("Auth State Changed failed"));
+          reject(new Error("Не удалось обновить статус авторизации :("));
         }
       });
     });
@@ -126,12 +123,12 @@ class Firebase {
 
             resolve({ products, lastKey });
           } catch (e) {
-            reject(e?.message || ":( Failed to fetch products.");
+            reject(e?.message || "Не удалось загрузить список товаров :(");
           }
         } else {
           const timeout = setTimeout(() => {
             didTimeout = true;
-            reject(new Error("Request timeout, please try again"));
+            reject(new Error("Время ожидания ответа истекло, попробуйте повторить чуть позже"));
           }, 15000);
 
           try {
@@ -155,7 +152,7 @@ class Firebase {
             }
           } catch (e) {
             if (didTimeout) return;
-            reject(e?.message || ":( Failed to fetch products.");
+            reject(e?.message || "Не удалось загрузить список товаров :(");
           }
         }
       })();

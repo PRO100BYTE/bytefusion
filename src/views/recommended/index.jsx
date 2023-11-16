@@ -1,7 +1,7 @@
 import { MessageDisplay } from '@/components/common';
 import { ProductShowcaseGrid } from '@/components/product';
 import { useDocumentTitle, useRecommendedProducts, useScrollTop } from '@/hooks';
-import bannerImg from '@/images/svg5.png';
+import bannerImg from '@/images/banner3.png';
 import React from 'react';
 
 const RecommendedProducts = () => {

@@ -21,7 +21,7 @@ const EditProduct = ({ match }) => {
   return (
     <div className="product-form-container">
       {error && <Redirect to="/dashboard/products" />}
-      <h2>Edit Product</h2>
+      <h2>Редактирование карточки товара</h2>
       {product && (
         <Suspense fallback={(
           <div className="loader" style={{ minHeight: '80vh' }}>

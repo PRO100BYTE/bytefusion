@@ -19,7 +19,7 @@ const ViewProduct = () => {
   const { product, isLoading, error } = useProduct(id);
   const { addToBasket, isItemOnBasket } = useBasket(id);
   useScrollTop();
-  useDocumentTitle(`View ${product?.name || 'Item'}`);
+  useDocumentTitle(`ByteFusion | ${product?.name || 'Item'}`);
 
   const [selectedImage, setSelectedImage] = useState(product?.image || '');
   const [selectedSize, setSelectedSize] = useState('');
