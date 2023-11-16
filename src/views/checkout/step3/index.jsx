@@ -42,7 +42,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
   };
 
   const onConfirm = () => {
-    displayActionMessage('Feature not ready yet :)', 'info');
+    displayActionMessage('Извините, данный функционал пока недоступен :(', 'error');
   };
 
   if (!shipping || !shipping.isDone) {
@@ -56,8 +56,8 @@ const Payment = ({ shipping, payment, subtotal }) => {
         validateOnChange
         validationSchema={FormSchema}
         validate={(form) => {
-          if (form.type === 'paypal') {
-            displayActionMessage('Данный функционал пока недоступен :(', 'info');
+          if (form.type === 'cash') {
+            displayActionMessage('Извините, данный функционал пока недоступен :(', 'error');
           }
         }}
         onSubmit={onConfirm}

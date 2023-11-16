@@ -9,7 +9,7 @@ import { editProduct } from '@/redux/actions/productActions';
 const ProductForm = lazy(() => import('../components/ProductForm'));
 
 const EditProduct = ({ match }) => {
-  useDocumentTitle('ByteFusion Admin | Редактирование товара');
+  useDocumentTitle('ByteFusion Admin | Редактирование карточки товара');
   useScrollTop();
   const { product, error, isLoading } = useProduct(match.params.id);
   const dispatch = useDispatch();

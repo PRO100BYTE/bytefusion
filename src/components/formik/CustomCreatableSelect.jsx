@@ -23,10 +23,7 @@ const CustomCreatableSelect = (props) => {
 
   const handleKeyDown = (e) => {
     if (type === 'number') {
-      const { key } = e.nativeEvent;
-      if (/\D/.test(key) && key !== 'Backspace') {
-        e.preventDefault();
-      }
+      
     }
   };
 

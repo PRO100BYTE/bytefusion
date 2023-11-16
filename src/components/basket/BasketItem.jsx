@@ -35,11 +35,10 @@ const BasketItem = ({ product }) => {
               <h5 className="my-0">{product.quantity}</h5>
             </div>
             <div>
-              <span className="spec-title">Размер</span>
+              <span className="spec-title">Параметры товара</span>
               <h5 className="my-0">
                 {product.selectedSize}
                 {' '}
-                мм
               </h5>
             </div>
             <div>
