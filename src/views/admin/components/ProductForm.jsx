@@ -171,14 +171,13 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                 &nbsp;
                 <div className="product-form-field">
                   <CustomCreatableSelect
-                    defaultValue={values.keywords.map((key) => ({ value: key, label: key }))}
                     name="sizes"
                     iid="sizes"
                     type="number"
                     isMulti
                     disabled={isLoading}
                     placeholder="Выбрать/создать размер"
-                    label="* Размер (миллиметры)"
+                    label="* Размер"
                   />
                 </div>
               </div>
@@ -221,7 +220,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                         <button
                           className="product-form-delete-image"
                           onClick={() => removeImage({ id: image.id, name: 'imageCollection' })}
-                          title="Delete Image"
+                          title="Удалить фото"
                           type="button"
                         >
                           <i className="fa fa-times-circle" />
@@ -273,7 +272,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                 >
                   {isLoading ? <LoadingOutlined /> : <CheckOutlined />}
                   &nbsp;
-                  {isLoading ? 'Saving Product' : 'Save Product'}
+                  {isLoading ? 'Сохраняю...' : 'Сохранить'}
                 </button>
               </div>
             </div>

@@ -12,7 +12,7 @@ export const displayDate = (timestamp) => {
   const year = date.getFullYear();
 
   // return day + ' ' + monthNames[monthIndex] + ' ' + year;
-  return `${monthNames[monthIndex]} ${day}, ${year}`;
+  return `${day}.${monthIndex+1}.${year}`;
 };
 
 export const displayMoney = (n) => {
