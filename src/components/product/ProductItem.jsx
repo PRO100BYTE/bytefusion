@@ -65,7 +65,7 @@ const ProductItem = ({ product, isItemOnBasket, addToBasket }) => {
             onClick={handleAddToBasket}
             type="button"
           >
-            {itemOnBasket ? 'Remove from basket' : 'Add to basket'}
+            {itemOnBasket ? 'Удалить из корзины' : 'Добавить в корзину'}
           </button>
         )}
 

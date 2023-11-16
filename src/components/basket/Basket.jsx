@@ -25,7 +25,7 @@ const Basket = () => {
     if (didMount && firebase.auth.currentUser && basket.length !== 0) {
       firebase.saveBasketItems(basket, firebase.auth.currentUser.uid)
         .then(() => {
-          console.log('Item saved to basket');
+          console.log('Товар добавлен в корзину');
         })
         .catch((e) => {
           console.log(e);

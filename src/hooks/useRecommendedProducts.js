@@ -35,7 +35,7 @@ const useRecommendedProducts = (itemsCount) => {
       }
     } catch (e) {
       if (didMount) {
-        setError('Не удалось найти рекомендованные товары. Пожалуйства, попробуйте еще раз :(');
+        setError('Не удалось найти рекомендованные товары. Пожалуйста, попробуйте еще раз :(');
         setLoading(false);
       }
     }

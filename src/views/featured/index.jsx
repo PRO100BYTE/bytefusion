@@ -1,7 +1,7 @@
 import { MessageDisplay } from '@/components/common';
 import { ProductShowcaseGrid } from '@/components/product';
 import { useDocumentTitle, useFeaturedProducts, useScrollTop } from '@/hooks';
-import bannerImg from '@/images/svg3.png';
+import bannerImg from '@/images/banner2.png';
 import React from 'react';
 
 const FeaturedProducts = () => {

@@ -27,7 +27,7 @@ const Footer = () => {
         <h5>
           Copyright &copy;&nbsp;
           {new Date().getFullYear()}&nbsp;|&nbsp;
-          PRO100BYTE Team
+          ByteFusion by PRO100BYTE Team
         </h5>
       </div>
       <div className="footer-col-3">
