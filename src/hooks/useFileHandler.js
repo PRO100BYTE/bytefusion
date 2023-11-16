@@ -25,8 +25,8 @@ const useFileHandler = (initState) => {
     if (!regex.exec(val)) {
       alert('Изображение должно быть в формате JPEG или PNG', 'error');
       setFileLoading(false);
-    } else if (size > 0.5) {
-      alert('Размер файла превышает 500 Кб, ему нужно немного похудеть. Позаботьтесь об этом :/', 'error');
+    } else if (size > 3) {
+      alert('Размер файла превышает 3 Мб, ему нужно немного похудеть. Позаботьтесь об этом :/', 'error');
       setFileLoading(false);
     } else if (type === 'multiple') {
       Array.from(event.target.files).forEach((file) => {

@@ -5,7 +5,7 @@ import {
 const defaultState = {
   shipping: {},
   payment: {
-    type: 'paypal',
+    type: 'cash',
     name: '',
     cardnumber: '',
     expiry: '',

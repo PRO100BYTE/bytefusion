@@ -40,13 +40,12 @@ const FormSchema = Yup.object().shape({
     .of(Yup.string())
     .min(1, 'Необходимо указать как минимум 1 ключевое слово'),
   sizes: Yup.array()
-    .of(Yup.number())
-    .min(1, 'Необходимо указать размер товара'),
+    .of(Yup.string())
+    .min(1, 'Необходимо указать параметры товара'),
   isFeatured: Yup.boolean(),
   isRecommended: Yup.boolean(),
   availableColors: Yup.array()
     .of(Yup.string().required())
-    .min(1, 'Необходимо указать цвет')
 });
 
 const ProductForm = ({ product, onSubmit, isLoading }) => {
@@ -75,8 +74,6 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
       onSubmit({
         ...form,
         quantity: 1,
-        // due to firebase function billing policy, let's add lowercase version
-        // of name here instead in firebase functions
         name_lower: form.name.toLowerCase(),
         dateAdded: new Date().getTime(),
         image: imageFile?.image?.file || product.imageUrl,
@@ -173,11 +170,11 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                   <CustomCreatableSelect
                     name="sizes"
                     iid="sizes"
-                    type="number"
+                    type="string"
                     isMulti
                     disabled={isLoading}
-                    placeholder="Выбрать/создать размер"
-                    label="* Размер"
+                    placeholder="Добавить параметр..."
+                    label="* Параметры (размер, модель)"
                   />
                 </div>
               </div>
