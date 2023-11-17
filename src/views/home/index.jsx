@@ -38,7 +38,7 @@ const Home = () => {
               <strong>❤️ любовью </strong>
             </h1>
             <p>
-              Быстрый и отзывчивый интернет-магазин. Разработан на ReactJS командой PRO100BYTE
+              Быстрая и отзывчивая CMS для создания интернет-магазина на ReactJS
             </p>
             <br />
             <Link to={SHOP} className="button">
