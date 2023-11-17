@@ -39,13 +39,10 @@ const FormSchema = Yup.object().shape({
   keywords: Yup.array()
     .of(Yup.string())
     .min(1, 'Необходимо указать как минимум 1 ключевое слово'),
-  sizes: Yup.array()
-    .of(Yup.string())
-    .min(1, 'Необходимо указать параметры товара'),
+  sizes: Yup.array(),
   isFeatured: Yup.boolean(),
   isRecommended: Yup.boolean(),
   availableColors: Yup.array()
-    .of(Yup.string().required())
 });
 
 const ProductForm = ({ product, onSubmit, isLoading }) => {
@@ -174,7 +171,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                     isMulti
                     disabled={isLoading}
                     placeholder="Добавить параметр..."
-                    label="* Параметры (размер, модель)"
+                    label="Параметры (размер, модель)"
                   />
                 </div>
               </div>
