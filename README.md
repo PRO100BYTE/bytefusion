@@ -1,5 +1,5 @@
 # ByteFusion
-Быстрая и отзывчивая CMS для создания интернет-магазина, написанная на ReactJS с использованием Redux, Vite.js и Firebase.
+Быстрая и отзывчивая CMS для создания интернет-магазина, написанная на ReactJS с использованием Redux, Vite.js и Firebase. Основана на Open source проекте [ecommerce-react](https://github.com/jgudo/ecommerce-react) с некоторыми доработками.
 
 ## Как запустить проект локально?
 ### 1. Установите зависимости
